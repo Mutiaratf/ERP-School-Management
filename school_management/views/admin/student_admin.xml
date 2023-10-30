@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="student_action" model="ir.actions.act_window">
+    <field name="name">student</field>
+    <field name="res_model">school_management.student</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="sm_student_view_tree" model="ir.ui.view">
+    <field name="name">student</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <tree string="student">
+        <field name="nis_id"></field>
+        <field name="student_name"></field>
+      </tree>
+    </field>
+  </record>
+
+  <record id="sm_student_view_form" model="ir.ui.view">
+    <field name="name">school_management.student.view.form</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="create_date"></field>
+            <field name="nis_id"></field>
+            <field name="student_name"></field>
+            <field name="gender"></field>
+            <field name="date_of_birth"></field>
+            <field name="level"></field>
+            <field name="major"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+</odoo>
